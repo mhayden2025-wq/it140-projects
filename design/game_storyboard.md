@@ -5,11 +5,11 @@
 
 ## Theme and Storyline
 
-**Theme:**
+The setting is in a dystopian future where the world's governments are run by AIs that have the ability to start a nuclear war
 
 TODO: Name and briefly describe your game's theme.
 
-**Storyline:**
+The world has enjoyed decades of peace under AI governance, but the system controlling the United States has begun to malfunction, threatening global nuclear war. As the crisis escalates, the player must infiltrate the AI’s central database and activate the killswitch before it launches its missiles. To reach the core, the player must gather keycards, encrypted access modules, and experimental weapons to survive the AI’s army of combat drones and automated defenses.
 
 TODO: In one short paragraph, explain the setting, the player's goal, the items
 the player must gather, and the threat created by the villain.
@@ -18,14 +18,14 @@ the player must gather, and the threat created by the villain.
 
 Project One requires a minimum of eight rooms.
 
-1. TODO: Start room
-2. TODO: Room
-3. TODO: Room
-4. TODO: Room
-5. TODO: Room
-6. TODO: Room
-7. TODO: Room
-8. TODO: Villain room
+1. Lobby (start room)
+2. Security room
+3. Research and development lab
+4. Drone Hangar
+5. Armory
+6. Server room
+7. Cooling Chamber
+8. Nuclear Command Core (Villain room)
 
 Add more rooms if your design needs them.
 
@@ -34,19 +34,19 @@ Add more rooms if your design needs them.
 With the minimum eight-room design, Project One requires at least six items.
 Every room except the start room and villain room must contain one item.
 
-1. TODO: Item
-2. TODO: Item
-3. TODO: Item
-4. TODO: Item
-5. TODO: Item
-6. TODO: Item
+1. Level 1 keycard
+2. Level 2 keycard
+3. Encrypted Access Module
+4. EMP Grenade
+5. Prototype Railgun
+6. AI Core Override Chip
 
 If you add rooms beyond the minimum, add an item for every additional room
 except the start room and villain room.
 
 ## Villain
 
-TODO: Identify and briefly describe the villain.
+The villain is an AI but by the time you get to the villain room it has made itself a physical body using cybernetics and synthetic human parts and it has weapons built into its body giving it a grotesque appearance.
 
 ## Storyboard and Map Check
 
