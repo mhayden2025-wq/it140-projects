@@ -1,4 +1,4 @@
-# Project One Move-Between-Rooms Pseudocode
+ INPUT direction# Project One Move-Between-Rooms Pseudocode
 #
 # Graded checkpoint: Module Five Project One
 # Later use: conceptual support for M6; movement design for M7
@@ -9,17 +9,69 @@
 
 # TODO 1: Identify the information the movement process needs.
 # Consider the player's current room and movement command.
+SET current_room TO "Lobby"
+SET game_active TO TRUE
 
 # TODO 2: Prompt for and receive the player's movement command.
+WHILE game_active IS TRUE
+    OUTPUT "Which direction do you want to move? (north, south, east, west)"
+    INPUT direction
 
 # TODO 3: Validate whether the requested movement is possible from the
 # current room. Show the decision clearly.
+IF current_room IS "Lobby" AND direction IS "north"
+    SET next_room TO "Nuclear Command Core"
+Else IF current_room IS "Lobby" AND direction IS "west"
+    SET next_room TO "Security Room"
+
+ELSE IF current_room IS "Security Room" AND direction IS "east"
+    SET next_room to "Lobby"
+ELSE IF current_room IS "Security Room" AND direction IS "north"
+    Set next_room TO "Research and Development Lab"
+
+ELSE IF current_room IS "Research and Development Lab" AND direction IS "north"
+    SET next_room TO "Armory"
+ELSE IF current_room IS "Drone Hangar" AND direction IS "south"
+    SET next_room TO "Research and Development Lab"
+
+ELSE IF current_room IS "Armory" AND direction IS "east"
+    SET next_room TO "Server Room"
+ELSE IF current IS "Armory" AND direction IS "west"
+    SET next_room TO "Drone Hangar"
+ELSE IF current_room IS "Armory" AND direction IS "south"
+    SET next_room TO "Nuclear Command Core"
+
+ELSE IF current_room IS "Server Room" AND direction IS "west"
+    SET next_room TO "Armory"
+ELSE IF current_room IS "Server Room" AND direction IS "south"
+    SET next_room TO "Cooling Chamber"
+
+ELSE IF current_room IS "Cooling Chamber" AND direction IS "north"
+    SET next_room TO "Server Room"
+
+ELSE IF current_room IS "Nuclear Command Core" AND direction IS "north"
+    SET next_room TO "Armory"
+ELSE IF current_room IS "Nuclear Command Core" AND direction IS "South"
+    SET next_room TO "Lobby"
+
+ELSE
+     SET next_room TO "invalid"
 
 # TODO 4: Describe what happens when the movement command is valid.
 # Include the room update and player output.
+IF next_room IS NOT "invalid"
+    SET current_room TO next_room
+    OUTPUT "You move to the " + current_room + "."
+
+    IF current_room IS "Nuclear Command Core"
+       OUTPUT "You have reached the final room."
+       SET game_active TO FALSE
 
 # TODO 5: Describe what happens when the movement command is invalid.
 # Include the output the player should receive.
+ELSE
+     OUTPUT "You can't go that way."
 
 # TODO 6: Show how movement fits into repeated gameplay.
 # The final game continues accepting commands until a required ending occurs.
+OUTPUT "Movement sequence complete."
