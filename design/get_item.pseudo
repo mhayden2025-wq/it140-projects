@@ -11,20 +11,54 @@ START get_item
 
     # TODO 1: Identify the information the get-item process needs.
     # Consider the current room, item in that room, and player's inventory.
+    SET inventory TO empty
+    SET room_item TO "none"
 
     # TODO 2: Prompt for and receive the player's get-item command.
+    OUTPUT "Do you want to pick up the item in this room? (yes or no)"
+    INPUT choice
 
     # TODO 3: Validate whether the requested item is available in the current
     # room. Show the decision clearly.
+    IF current_room IS "Security Room"
+        SET room_item TO "Level 1 Keycard"
+
+    ELSE IF current_room IS "Research and Development Lab"
+        SET room_item TO "EMP Grenade"
+
+    ELSE IF current_room IS "Drone Hangar"
+        SET room_item TO "Encrypted Access Module"
+
+    ELSE IF current_room IS "Armory"
+        SET room_item TO "Level 2 Keycard"
+
+    ELSE IF current_room IS "Server Room"
+        SET room_item TO "Prototype Railgun"
+
+    ELSE IF current_room IS "Cooling Chamber"
+        SET room_item TO "AI Core Override Chip"
+
+    ELSE
+        SET room_item TO "none"
 
     # TODO 4: Describe what happens when the item request is valid.
     # Include the inventory update and player output.
+    IF choice IS "yes" AND room_item IS NOT "none"
+        ADD room_item TO inventory
+        OUTPUT "You picked up the " + room_item + "."
+        SET room_item TO "none"
 
     # TODO 5: Describe what happens when the item request is invalid.
     # Include the output the player should receive.
+    ELSE IF choice IS "yes" AND room_item IS "none"
+        OUTPUT "There is no item to pick up here."
+
+    ELSE
+        OUTPUT "You chose not to pick up anything."
 
     # TODO 6: Show how the process returns to or continues the larger gameplay
     # loop after the command is handled.
+    OUTPUT "Item check complete."
 
 END get_item
 
